@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elham Widiyanto - Portfolio</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
+    <style>
+        body {
+            background-color: #0f172a;
+            color: #f8fafc; /* Warna teks utama menjadi putih terang */
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        .navbar {
+            background-color: rgba(15, 23, 42, 0.9) !important;
+            backdrop-filter: blur(10px);
+        }
+        .text-gradient {
+            background: linear-gradient(45deg, #38bdf8, #818cf8);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .card-custom {
+            background-color: #1e293b;
+            border: 1px solid #334155;
+            border-radius: 12px;
+            transition: transform 0.3s ease, border-color 0.3s ease;
+        }
+        .card-custom:hover {
+            transform: translateY(-5px);
+            border-color: #38bdf8;
+        }
+        .badge-skill {
+            background-color: #334155;
+            color: #38bdf8;
+            font-weight: 500;
+            padding: 8px 16px;
+            border-radius: 20px;
+            margin: 4px;
+            display: inline-block;
+        }
+        .timeline-item {
+            border-left: 2px solid #334155;
+            padding-left: 20px;
+            position: relative;
+        }
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: -7px;
+            top: 5px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background-color: #38bdf8;
+        }
+        /* Custom class untuk teks deskripsi agar tetap terang dan kontras */
+        .text-light-custom {
+            color: #cbd5e1 !important;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
+        <div class="container">
+            <a class="navbar-brand fw-bold text-gradient" href="#">ELHAM.W</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO SECTION -->
+    <section id="tentang" class="py-5 my-5">
+        <div class="container">
+            <div class="row align-items-center g-5">
+                <div class="col-lg-8">
+                    <h1 class="display-4 fw-bold text-white mb-2">Hi, Saya <span class="text-gradient">Elham Widiyanto</span></h1>
+                    <h3 class="h4 text-info mb-4">IT Engineer / Infrastructure Specialist</h3>
+                    <p class="lead text-light-custom mb-4">
+                        Seorang IT Engineer berpengalaman yang fokus pada desain, implementasi, dan pengelolaan infrastruktur teknologi. Mahir dalam memastikan kinerja jaringan dan server yang optimal dengan pendekatan proaktif terhadap pemeliharaan, troubleshooting, serta penerapan standar ISO untuk efisiensi operasional.
+                    </p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="mailto:elhamwidiyanto@gmail.com" class="btn btn-primary px-4 py-2 rounded-pill"><i class="bi bi-envelope-fill me-2"></i>Kontak Saya</a>
+                        <a href="https://taplink.cc/elhamwidiyanto" target="_blank" class="btn btn-outline-light px-4 py-2 rounded-pill"><i class="bi bi-link-45deg me-1"></i>Taplink Profile</a>
+                    </div>
+                </div>
+                <div class="col-lg-4 text-center">
+                    <div class="p-4 card-custom d-inline-block text-start w-100">
+                        <!-- Kontak Info Card -->
+                        <h5 class="text-white mb-3 text-center">Informasi Kontak</h5>
+                        <p class="small text-white mb-2"><i class="bi bi-telephone text-info me-2"></i> 081384034335</p>
+                        <p class="small text-white mb-2"><i class="bi bi-envelope text-info me-2"></i> elhamwidiyanto@gmail.com</p>
+                        <p class="small text-white mb-0"><i class="bi bi-geo-alt text-info me-2"></i> Depok, Jawa Barat</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENGALAMAN KERJA -->
+    <section id="pengalaman" class="py-5 bg-opacity-25 bg-black">
+        <div class="container">
+            <h2 class="fw-bold text-white mb-5"><i class="bi bi-briefcase me-3 text-primary"></i>Pengalaman Kerja</h2>
+            
+            <div class="row g-4">
+                <!-- Kerja 1 -->
+                <div class="col-11 offset-1 timeline-item mb-4">
+                    <span class="badge bg-primary mb-2">Feb 2020 - Saat ini</span>
+                    <h4 class="text-white mb-1">IT Officer / Infrastruktur (Full Time)</h4>
+                    <h5 class="text-info h6 mb-3">PT Pangansari Utama - Jakarta, Indonesia</h5>
+                    <ul class="small text-white ps-3">
+                        <li class="mb-2">Mengelola ketersediaan dan perawatan perangkat hardware/software untuk kebutuhan end-user dan sistem eksisting.</li>
+                        <li class="mb-2">Mengendalikan proses kerja sesuai standar ISO 9001:2015, ISO 22000:2018, OHSAS 18001, serta memenuhi target KPI.</li>
+                        <li class="mb-2">Melakukan monitoring, inventarisasi aset IT, troubleshooting, dan pemeliharaan performa seluruh server beserta aplikasinya.</li>
+                    </ul>
+                </div>
+
+                <!-- Kerja 2 -->
+                <div class="col-11 offset-1 timeline-item mb-4">
+                    <span class="badge bg-secondary mb-2">Agu 2019 - Nov 2019</span>
+                    <h4 class="text-white mb-1">IT Engineer (Freelance)</h4>
+                    <h5 class="text-info h6 mb-3">PT Graha Karya Informasi - Jakarta, Indonesia</h5>
+                    <ul class="small text-white ps-3">
+                        <li class="mb-2">Memeriksa, merawat, dan mengganti komponen perangkat keras (switch, router, server) serta menjaga stabilitas ruang data dari overheating.</li>
+                        <li class="mb-2">Memastikan pembaruan sistem operasi jaringan, firewall, sistem keamanan, patch keamanan, serta mitigasi serangan malware/ransomware.</li>
+                        <li class="mb-2">Mengatur dan memperbarui topologi jaringan serta pengalamatan IP untuk efisiensi troubleshooting.</li>
+                    </ul>
+                </div>
+
+                <!-- Kerja 3 -->
+                <div class="col-11 offset-1 timeline-item mb-4">
+                    <span class="badge bg-secondary mb-2">Okt 2018 - Jan 2019</span>
+                    <h4 class="text-white mb-1">Network Junior Engineer (Freelance)</h4>
+                    <h5 class="text-info h6 mb-3">PT Aplikanusa Lintasarta - Jakarta, Indonesia</h5>
+                    <ul class="small text-white ps-3">
+                        <li class="mb-2">Menangani penanganan gangguan (troubleshooting) koneksi Layer 2 untuk pelanggan melalui sistem ticketing.</li>
+                        <li class="mb-2">Menganalisa performa perangkat jaringan seperti GPON, VSAT, Radio Link, dan Fiber Optic (FO) untuk memastikan stabilitas koneksi.</li>
+                    </ul>
+                </div>
+
+                <!-- Kerja 4 -->
+                <div class="col-11 offset-1 timeline-item">
+                    <span class="badge bg-secondary mb-2">Agu 2015 - Jul 2016</span>
+                    <h4 class="text-white mb-1">IT Infrastructure (Freelance)</h4>
+                    <h5 class="text-info h6 mb-3">Lazada Indonesia - Jakarta, Indonesia</h5>
+                    <ul class="small text-white ps-3">
+                        <li class="mb-2">Melakukan perbaikan infrastruktur IT mencakup O365, LDAP, Manage Network, PABX, NAS, File Sharing, dan konfigurasi SAP.</li>
+                        <li class="mb-2">Melakukan monitoring network, maintenance DVR CCTV, pelaporan absensi, serta koordinasi dengan vendor pemeliharaan.</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- PENDIDIKAN -->
+    <section id="pendidikan" class="py-5">
+        <div class="container">
+            <h2 class="fw-bold text-white mb-4"><i class="bi bi-mortarboard me-3 text-primary"></i>Pendidikan</h2>
+            <div class="card-custom p-4">
+                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
+                    <div>
+                        <h4 class="text-white mb-1">Universitas Indraprasta PGRI</h4>
+                        <p class="text-light-custom mb-0">S1 Teknik Informatika (Bachelor of Computer Science)</p>
+                    </div>
+                    <div class="text-md-end">
+                        <span class="badge bg-dark border border-secondary text-light px-3 py-2">Lulus: 2018</span>
+                        <p class="mt-2 mb-0 text-info fw-bold">IPK: 2.96 / 4.00</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- KEMAMPUAN & KETERAMPILAN -->
+    <section id="keahlian" class="py-5 bg-opacity-25 bg-black">
+        <div class="container">
+            <h2 class="fw-bold text-white mb-4"><i class="bi bi-cpu me-3 text-primary"></i>Keahlian & Keterampilan</h2>
+            <div class="row g-4">
+                <!-- Hard Skills -->
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <h3 class="h5 text-white mb-3"><i class="bi bi-wrench-adjustable me-2 text-info"></i>Hard Skills</h3>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">Mikrotik</span>
+                            <span class="badge-skill">Ubuntu Server</span>
+                            <span class="badge-skill">Centos Server</span>
+                            <span class="badge-skill">Reverse Proxy</span>
+                            <span class="badge-skill">CPanel</span>
+                            <span class="badge-skill">Mail Server</span>
+                            <span class="badge-skill">Proxmox</span>
+                            <span class="badge-skill">VMware</span>
+                            <span class="badge-skill">SSL</span>
+                            <span class="badge-skill">Unifi</span>
+                            <span class="badge-skill">Storage Server</span>
+                            <span class="badge-skill">Helpdesk</span>
+                            <span class="badge-skill">CCTV</span>
+                        </div>
+                    </div>
+                </div>
+                <!-- Soft Skills -->
+                <div class="col-md-6">
+                    <div class="card-custom p-4 h-100">
+                        <h3 class="h5 text-white mb-3"><i class="bi bi-people me-2 text-info"></i>Soft Skills</h3>
+                        <div class="d-flex flex-wrap">
+                            <span class="badge-skill">Manajemen Waktu</span>
+                            <span class="badge-skill">Komunikasi Tertulis & Lisan</span>
+                            <span class="badge-skill">Berpikir Logis</span>
+                            <span class="badge-skill">Problem Solving</span>
+                            <span class="badge-skill">Kerjasama Tim</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="py-4 text-center border-top border-secondary mt-5">
+        <div class="container">
+            <p class="small text-light-custom mb-0">&copy; 2026 Elham Widiyanto. Built with Bootstrap.</p>
+        </div>
+    </footer>
+
+    <!-- Bootstrap 5 JavaScript Bundle -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
