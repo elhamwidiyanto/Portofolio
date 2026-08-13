@@ -1,252 +1,90 @@
 <!DOCTYPE html>
 <html lang="id">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Elham Widiyanto - Portfolio</title>
-    <!-- Bootstrap 5 CSS -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css">
-    <style>
-        body {
-            background-color: #0f172a;
-            color: #f8fafc; /* Warna teks utama menjadi putih terang */
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-        }
-        .navbar {
-            background-color: rgba(15, 23, 42, 0.9) !important;
-            backdrop-filter: blur(10px);
-        }
-        .text-gradient {
-            background: linear-gradient(45deg, #38bdf8, #818cf8);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-        }
-        .card-custom {
-            background-color: #1e293b;
-            border: 1px solid #334155;
-            border-radius: 12px;
-            transition: transform 0.3s ease, border-color 0.3s ease;
-        }
-        .card-custom:hover {
-            transform: translateY(-5px);
-            border-color: #38bdf8;
-        }
-        .badge-skill {
-            background-color: #334155;
-            color: #38bdf8;
-            font-weight: 500;
-            padding: 8px 16px;
-            border-radius: 20px;
-            margin: 4px;
-            display: inline-block;
-        }
-        .timeline-item {
-            border-left: 2px solid #334155;
-            padding-left: 20px;
-            position: relative;
-        }
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            left: -7px;
-            top: 5px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background-color: #38bdf8;
-        }
-        /* Custom class untuk teks deskripsi agar tetap terang dan kontras */
-        .text-light-custom {
-            color: #cbd5e1 !important;
-        }
-    </style>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Elham Widiyanto — IT Infrastructure Engineer | Infrastructure, Server, Network, Monitoring, IT Operations & Generative AI.">
+  <title>Elham Widiyanto | IT Infrastructure Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <style>
+    :root{--bg:#070b14;--panel:#0d1422;--panel2:#111b2d;--line:rgba(148,163,184,.16);--text:#f8fafc;--muted:#94a3b8;--cyan:#38bdf8;--violet:#8b5cf6;--green:#34d399}
+    *{scroll-behavior:smooth}
+    body{margin:0;background:radial-gradient(circle at 80% 5%,rgba(56,189,248,.12),transparent 28%),radial-gradient(circle at 15% 25%,rgba(139,92,246,.10),transparent 30%),var(--bg);color:var(--text);font-family:Inter,system-ui,sans-serif;line-height:1.7}
+    h1,h2,h3,h4,.navbar-brand{font-family:'Space Grotesk',Inter,sans-serif}
+    a{color:inherit}.navbar{background:rgba(7,11,20,.72);backdrop-filter:blur(18px);border-bottom:1px solid var(--line)}
+    .navbar-brand{letter-spacing:.08em}.nav-link{color:#cbd5e1!important;font-size:.92rem}.nav-link:hover{color:#fff!important}
+    .hero{min-height:calc(100vh - 72px);display:flex;align-items:center;padding:90px 0 70px;position:relative;overflow:hidden}
+    .grid-bg{position:absolute;inset:0;opacity:.22;background-image:linear-gradient(rgba(148,163,184,.08) 1px,transparent 1px),linear-gradient(90deg,rgba(148,163,184,.08) 1px,transparent 1px);background-size:48px 48px;mask-image:linear-gradient(to bottom,#000,transparent 85%)}
+    .eyebrow{display:inline-flex;align-items:center;gap:9px;padding:8px 14px;border:1px solid rgba(56,189,248,.25);background:rgba(56,189,248,.06);border-radius:999px;color:#7dd3fc;font-size:.82rem;font-weight:700;letter-spacing:.08em;text-transform:uppercase}
+    .eyebrow .dot{width:7px;height:7px;background:var(--green);border-radius:50%;box-shadow:0 0 14px var(--green)}
+    .hero h1{font-size:clamp(3rem,7vw,6.5rem);line-height:.98;letter-spacing:-.055em;margin:24px 0 22px}.gradient{background:linear-gradient(100deg,#fff 15%,#7dd3fc 52%,#a78bfa 90%);-webkit-background-clip:text;background-clip:text;color:transparent}
+    .hero-sub{max-width:760px;color:#cbd5e1;font-size:1.12rem}.muted{color:var(--muted)}
+    .btn-main{background:linear-gradient(135deg,var(--cyan),var(--violet));border:0;color:#fff;font-weight:700;padding:13px 22px;border-radius:12px;box-shadow:0 12px 30px rgba(56,189,248,.15)}.btn-main:hover{color:#fff;transform:translateY(-2px)}
+    .btn-ghost{border:1px solid var(--line);background:rgba(255,255,255,.03);color:#e2e8f0;padding:12px 20px;border-radius:12px}.btn-ghost:hover{border-color:rgba(56,189,248,.4);color:#fff}
+    .terminal{background:rgba(13,20,34,.84);border:1px solid var(--line);border-radius:22px;box-shadow:0 25px 80px rgba(0,0,0,.35);overflow:hidden}.terminal-bar{padding:13px 16px;border-bottom:1px solid var(--line);display:flex;gap:7px}.terminal-bar span{width:9px;height:9px;border-radius:50%;background:#475569}.terminal-body{padding:24px;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.83rem;color:#a5f3fc}.code-dim{color:#64748b}.code-violet{color:#c4b5fd}.code-green{color:#86efac}
+    section{padding:105px 0}.section-kicker{color:#7dd3fc;font-size:.78rem;font-weight:800;letter-spacing:.15em;text-transform:uppercase;margin-bottom:10px}.section-title{font-size:clamp(2rem,4vw,3.2rem);letter-spacing:-.04em;margin-bottom:14px}.section-lead{color:var(--muted);max-width:700px}
+    .card-modern{height:100%;background:linear-gradient(145deg,rgba(17,27,45,.92),rgba(9,14,25,.92));border:1px solid var(--line);border-radius:20px;padding:28px;transition:.3s}.card-modern:hover{transform:translateY(-6px);border-color:rgba(56,189,248,.35);box-shadow:0 20px 55px rgba(0,0,0,.22)}
+    .icon-box{width:48px;height:48px;border-radius:14px;display:grid;place-items:center;background:rgba(56,189,248,.1);color:#7dd3fc;font-size:1.25rem;margin-bottom:20px}.card-modern h3{font-size:1.2rem}.card-modern p{color:var(--muted);font-size:.92rem;margin-bottom:0}
+    .skill-wrap{display:flex;flex-wrap:wrap;gap:9px}.skill{padding:9px 13px;border-radius:10px;background:rgba(148,163,184,.07);border:1px solid var(--line);color:#cbd5e1;font-size:.82rem;font-weight:600}.skill:hover{border-color:rgba(56,189,248,.3);color:#fff}
+    .skill-feature{border:1px solid rgba(56,189,248,.18);background:linear-gradient(145deg,rgba(56,189,248,.07),rgba(139,92,246,.05));border-radius:20px;padding:30px}.skill-feature .number{font-family:'Space Grotesk';font-size:2.4rem;font-weight:700;color:#7dd3fc}
+    .timeline{position:relative;padding-left:34px}.timeline:before{content:'';position:absolute;left:8px;top:5px;bottom:5px;width:1px;background:linear-gradient(var(--cyan),rgba(148,163,184,.08))}.timeline-item{position:relative;margin-bottom:38px}.timeline-item:before{content:'';position:absolute;left:-31px;top:8px;width:15px;height:15px;border:3px solid var(--bg);background:var(--cyan);border-radius:50%;box-shadow:0 0 0 4px rgba(56,189,248,.13)}.timeline-date{font-size:.78rem;color:#7dd3fc;font-weight:700;letter-spacing:.06em}.timeline h3{font-size:1.2rem;margin:5px 0}.timeline-company{color:#c4b5fd;font-weight:600;font-size:.9rem}.timeline ul{color:var(--muted);font-size:.9rem;margin-top:12px}.timeline li{margin-bottom:7px}
+    .tech-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}.tech-item{padding:18px;border:1px solid var(--line);border-radius:16px;background:rgba(255,255,255,.025)}.tech-item strong{display:block;font-size:.9rem;margin-bottom:5px}.tech-item span{color:var(--muted);font-size:.8rem}
+    .contact-box{border:1px solid rgba(56,189,248,.2);background:radial-gradient(circle at 100% 0,rgba(139,92,246,.14),transparent 38%),rgba(13,20,34,.9);border-radius:26px;padding:42px}.contact-link{display:inline-flex;align-items:center;gap:9px;color:#cbd5e1;text-decoration:none;margin:5px 14px 5px 0}.contact-link:hover{color:#7dd3fc}
+    footer{border-top:1px solid var(--line);color:#64748b;padding:28px 0;font-size:.82rem}.badge-soft{padding:7px 10px;border-radius:8px;background:rgba(52,211,153,.08);border:1px solid rgba(52,211,153,.18);color:#6ee7b7;font-size:.75rem;font-weight:700}
+    @media(max-width:991px){.hero{padding-top:60px}.terminal{margin-top:25px}}@media(max-width:575px){section{padding:75px 0}.tech-grid{grid-template-columns:1fr}.contact-box{padding:28px}.hero h1{font-size:3.2rem}}
+  </style>
 </head>
 <body>
+<nav class="navbar navbar-expand-lg navbar-dark sticky-top">
+  <div class="container py-2"><a class="navbar-brand fw-bold" href="#home">ELHAM<span class="text-info">.</span></a>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#nav"><span class="navbar-toggler-icon"></span></button>
+    <div class="collapse navbar-collapse" id="nav"><ul class="navbar-nav ms-auto gap-lg-2"><li class="nav-item"><a class="nav-link" href="#about">About</a></li><li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li><li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li><li class="nav-item"><a class="nav-link" href="#technology">Technology</a></li><li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li></ul></div>
+  </div>
+</nav>
 
-    <!-- NAVBAR -->
-    <nav class="navbar navbar-expand-lg navbar-dark sticky-top py-3">
-        <div class="container">
-            <a class="navbar-brand fw-bold text-gradient" href="#">ELHAM WIDIYANTO</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item"><a class="nav-link" href="#tentang">Tentang</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pengalaman">Pengalaman</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#pendidikan">Pendidikan</a></li>
-                    <li class="nav-item"><a class="nav-link" href="#keahlian">Keahlian</a></li>
-                </ul>
-            </div>
-        </div>
-    </nav>
+<main id="home">
+<section class="hero"><div class="grid-bg"></div><div class="container position-relative"><div class="row align-items-center g-5"><div class="col-lg-7">
+  <div class="eyebrow"><span class="dot"></span> IT Infrastructure Engineer</div>
+  <h1>Build. <span class="gradient">Operate.</span><br>Improve.</h1>
+  <p class="hero-sub">IT Engineer dengan pengalaman di <strong>infrastructure, server, network, monitoring, troubleshooting</strong> dan end-user support. Berfokus pada reliability, operational excellence, dan pemanfaatan Generative AI untuk produktivitas serta solusi internal.</p>
+  <div class="d-flex flex-wrap gap-3 mt-4"><a class="btn btn-main" href="#skills"><i class="bi bi-stars me-2"></i>Explore Skills</a><a class="btn btn-ghost" href="https://taplink.cc/elhamwidiyanto" target="_blank"><i class="bi bi-link-45deg me-2"></i>Profile Links</a></div>
+  <div class="d-flex flex-wrap gap-3 mt-4"><span class="badge-soft">Infrastructure</span><span class="badge-soft">System Operations</span><span class="badge-soft">Monitoring</span><span class="badge-soft">AI & Automation</span></div>
+</div><div class="col-lg-5"><div class="terminal"><div class="terminal-bar"><span></span><span></span><span></span></div><div class="terminal-body"><div><span class="code-dim">$</span> whoami</div><div class="code-violet">elhamwidiyanto</div><br><div><span class="code-dim">$</span> role</div><div class="code-green">IT Infrastructure Engineer</div><br><div><span class="code-dim">$</span> focus</div><div>server / network / monitoring</div><div>linux / virtualization / database</div><div>AI tools / API / automation</div><br><div><span class="code-dim">$</span> status</div><div class="code-green">● operational</div></div></div></div></div></div></section>
 
-    <!-- HERO SECTION -->
-    <section id="tentang" class="py-5 my-5">
-        <div class="container">
-            <div class="row align-items-center g-5">
-                <div class="col-lg-8">
-                    <h1 class="display-4 fw-bold text-white mb-2">Hi, Saya <span class="text-gradient">Elham Widiyanto</span></h1>
-                    <h3 class="h4 text-info mb-4">IT Engineer / Infrastructure Specialist</h3>
-                    <p class="lead text-light-custom mb-4">
-                        Seorang IT Engineer berpengalaman yang fokus pada desain, implementasi, dan pengelolaan infrastruktur teknologi. Mahir dalam memastikan kinerja jaringan dan server yang optimal dengan pendekatan proaktif terhadap pemeliharaan, troubleshooting, serta penerapan standar ISO untuk efisiensi operasional.
-                    </p>
-                    <div class="d-flex flex-wrap gap-3">
-                        <a href="https://taplink.cc/elhamwidiyanto" target="_blank" class="btn btn-outline-light px-4 py-2 rounded-pill"><i class="bi bi-link-45deg me-1"></i>Taplink Profile</a>
-                    </div>
-                </div>
-                <div class="col-lg-4 text-center">
-                    <div class="p-4 card-custom d-inline-block text-start w-100">
-                        <!-- Kontak Info Card -->
-                        <h5 class="text-white mb-3 text-center">Informasi Kontak</h5>
-<p class="small text-white mb-2">
-    <a href="https://wa.me/6281384034335" target="_blank" class="text-white text-decoration-none">
-        <i class="bi bi-whatsapp text-success me-2"></i> 081384034335
-    </a>
-</p>
-<p class="small text-white mb-2">
-    <a href="https://mail.google.com/mail/u/0/?tf=cm&fs=1&to=elhamwidiyanto3@gmail.com" class="text-white text-decoration-none">
-        <i class="bi bi-envelope text-info me-2"></i> elhamwidiyanto@gmail.com
-    </a>
-</p>
-<p class="small text-white mb-0">
-    <a href="https://maps.google.com/?q=Kota+Tangerang,+Banten" target="_blank" class="text-white text-decoration-none">
-        <i class="bi bi-geo-alt text-danger me-2"></i> Kota Tangerang, Banten
-    </a>
-</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
+<section id="about"><div class="container"><div class="row g-5 align-items-end"><div class="col-lg-7"><div class="section-kicker">Profile</div><h2 class="section-title">Infrastructure mindset, modern IT tools.</h2><p class="section-lead">Berpengalaman menjaga ketersediaan perangkat dan sistem IT, preventive maintenance, pengelolaan aset, troubleshooting, serta mendukung kebutuhan operasional perusahaan dalam lingkungan enterprise dan standar ISO.</p></div><div class="col-lg-5"><div class="skill-feature"><div class="number">6+</div><div class="fw-bold">Years of IT experience</div><p class="muted mt-2 mb-0">Infrastructure, operations, network, support, dan teknologi modern.</p></div></div></div></div></section>
 
-    <!-- PENGALAMAN KERJA -->
-    <section id="pengalaman" class="py-5 bg-opacity-25 bg-black">
-        <div class="container">
-            <h2 class="fw-bold text-white mb-5"><i class="bi bi-briefcase me-3 text-primary"></i>Pengalaman Kerja</h2>
-            
-            <div class="row g-4">
-                <!-- Kerja 1 -->
-                <div class="col-11 offset-1 timeline-item mb-4">
-                    <span class="badge bg-primary mb-2">Feb 2020 - Saat ini</span>
-                    <h4 class="text-white mb-1">IT Officer / Infrastruktur (Full Time)</h4>
-                    <h5 class="text-info h6 mb-3">PT Pangansari Utama - Jakarta, Indonesia</h5>
-                    <ul class="small text-white ps-3">
-                        <li class="mb-2">Mengelola ketersediaan dan perawatan perangkat hardware/software untuk kebutuhan end-user dan sistem eksisting.</li>
-                        <li class="mb-2">Mengendalikan proses kerja sesuai standar ISO 9001:2015, ISO 22000:2018, OHSAS 18001, serta memenuhi target KPI.</li>
-                        <li class="mb-2">Melakukan monitoring, inventarisasi aset IT, troubleshooting, dan pemeliharaan performa seluruh server beserta aplikasinya.</li>
-                    </ul>
-                </div>
+<section id="skills" class="pt-0"><div class="container"><div class="section-kicker">Core capabilities</div><h2 class="section-title">Keahlian utama</h2><p class="section-lead mb-5">Skillset yang disusun dari profil profesional terbaru.</p><div class="row g-4">
+  <div class="col-md-6 col-xl-3"><div class="card-modern"><div class="icon-box"><i class="bi bi-server"></i></div><h3>Infrastructure</h3><p>Server, Linux administration, virtualization, reverse proxy, SSL/TLS, storage dan NAS.</p></div></div>
+  <div class="col-md-6 col-xl-3"><div class="card-modern"><div class="icon-box"><i class="bi bi-diagram-3"></i></div><h3>Network</h3><p>MikroTik, UniFi, TCP/IP, DNS, DHCP, VLAN, firewall, VPN dan troubleshooting.</p></div></div>
+  <div class="col-md-6 col-xl-3"><div class="card-modern"><div class="icon-box"><i class="bi bi-activity"></i></div><h3>Operations</h3><p>Prometheus, Grafana, monitoring, preventive maintenance, asset management dan IT support.</p></div></div>
+  <div class="col-md-6 col-xl-3"><div class="card-modern"><div class="icon-box"><i class="bi bi-robot"></i></div><h3>AI & Productivity</h3><p>ChatGPT, Claude, DeepSeek, OpenRouter, prompting, AI-assisted coding, Vibe Coding, OpenClaw dan n8n basic.</p></div></div>
+</div></div></section>
 
-                <!-- Kerja 2 -->
-                <div class="col-11 offset-1 timeline-item mb-4">
-                    <span class="badge bg-secondary mb-2">Agu 2019 - Nov 2019</span>
-                    <h4 class="text-white mb-1">IT Engineer (Freelance)</h4>
-                    <h5 class="text-info h6 mb-3">PT Graha Karya Informasi - Jakarta, Indonesia</h5>
-                    <ul class="small text-white ps-3">
-                        <li class="mb-2">Memeriksa, merawat, dan mengganti komponen perangkat keras (switch, router, server) serta menjaga stabilitas ruang data dari overheating.</li>
-                        <li class="mb-2">Memastikan pembaruan sistem operasi jaringan, firewall, sistem keamanan, patch keamanan, serta mitigasi serangan malware/ransomware.</li>
-                        <li class="mb-2">Mengatur dan memperbarui topologi jaringan serta pengalamatan IP untuk efisiensi troubleshooting.</li>
-                    </ul>
-                </div>
+<section id="technology" class="pt-0"><div class="container"><div class="row g-5"><div class="col-lg-5"><div class="section-kicker">Technology stack</div><h2 class="section-title">Tools yang saya gunakan.</h2><p class="section-lead">Kombinasi infrastructure, network, monitoring, application/database, enterprise IT dan AI tools.</p></div><div class="col-lg-7"><div class="tech-grid">
+  <div class="tech-item"><strong><i class="bi bi-hdd-network me-2 text-info"></i>Infrastructure</strong><span>Ubuntu Server • CentOS Server • Linux • Proxmox • VMware • Reverse Proxy • SSL/TLS • CPanel • Storage/NAS</span></div>
+  <div class="tech-item"><strong><i class="bi bi-router me-2 text-info"></i>Network</strong><span>MikroTik • UniFi • TCP/IP • DNS • DHCP • VLAN • Firewall • VPN</span></div>
+  <div class="tech-item"><strong><i class="bi bi-bar-chart-line me-2 text-info"></i>Monitoring</strong><span>Prometheus • Grafana • Server Monitoring • Network Monitoring • Preventive Maintenance</span></div>
+  <div class="tech-item"><strong><i class="bi bi-code-slash me-2 text-info"></i>Application & Database</strong><span>MySQL • PostgreSQL • PHP • Laravel • Slim Framework • REST API • Webhook • Git • WordPress</span></div>
+  <div class="tech-item"><strong><i class="bi bi-stars me-2 text-info"></i>AI & Productivity</strong><span>ChatGPT • Claude AI • DeepSeek • OpenRouter • Prompting • AI-assisted coding • Vibe Coding • OpenClaw • n8n (basic)</span></div>
+  <div class="tech-item"><strong><i class="bi bi-building me-2 text-info"></i>Enterprise IT</strong><span>Microsoft 365/O365 • LDAP • SAP Support • PABX • CCTV/DVR • File Sharing • IT Asset Management</span></div>
+</div></div></div></div></section>
 
-                <!-- Kerja 3 -->
-                <div class="col-11 offset-1 timeline-item mb-4">
-                    <span class="badge bg-secondary mb-2">Okt 2018 - Jan 2019</span>
-                    <h4 class="text-white mb-1">Network Junior Engineer (Freelance)</h4>
-                    <h5 class="text-info h6 mb-3">PT Aplikanusa Lintasarta - Jakarta, Indonesia</h5>
-                    <ul class="small text-white ps-3">
-                        <li class="mb-2">Menangani penanganan gangguan (troubleshooting) koneksi Layer 2 untuk pelanggan melalui sistem ticketing.</li>
-                        <li class="mb-2">Menganalisa performa perangkat jaringan seperti GPON, VSAT, Radio Link, dan Fiber Optic (FO) untuk memastikan stabilitas koneksi.</li>
-                    </ul>
-                </div>
+<section id="experience" class="pt-0"><div class="container"><div class="section-kicker">Career</div><h2 class="section-title">Professional experience</h2><div class="timeline mt-5">
+  <div class="timeline-item"><div class="timeline-date">FEB 2020 — PRESENT</div><h3>IT Officer / Infrastruktur</h3><div class="timeline-company">PT Pangansari Utama</div><ul><li>Menjaga ketersediaan perangkat IT end-user dan melakukan maintenance hardware/software.</li><li>Monitoring server dan aplikasi untuk membantu memastikan layanan berjalan dengan baik.</li><li>Troubleshooting hardware/software dan kebutuhan teknis end-user.</li><li>Pencatatan dan pengelolaan hardware/software perusahaan.</li><li>Mendukung proses berdasarkan ISO 9001:2015, ISO 22000:2018, OHSAS 18001 dan target KPI.</li></ul></div>
+  <div class="timeline-item"><div class="timeline-date">AUG 2019 — NOV 2019</div><h3>IT Engineer — Freelance</h3><div class="timeline-company">PT Graha Karya Informasi</div><ul><li>Maintenance switch, router, server, hardware, operating system, firewall dan aplikasi jaringan.</li><li>Monitoring sistem, troubleshooting software dan preventive maintenance infrastruktur.</li><li>Mengelola topologi jaringan, IP address dan dokumentasi troubleshooting.</li></ul></div>
+  <div class="timeline-item"><div class="timeline-date">OCT 2018 — JAN 2019</div><h3>Network Junior Engineer — Freelance</h3><div class="timeline-company">PT Aplikanusa Lintasarta</div><ul><li>Troubleshooting koneksi Layer 2 pelanggan melalui sistem tiket.</li><li>Menganalisis GPON, VSAT, Radio Link dan Fiber Optic untuk menjaga stabilitas koneksi.</li></ul></div>
+  <div class="timeline-item mb-0"><div class="timeline-date">AUG 2015 — JUL 2016</div><h3>IT Infrastructure — Freelance</h3><div class="timeline-company">Lazada Indonesia</div><ul><li>Support hardware, O365, LDAP, network, PABX, attendance report, NAS dan file sharing.</li><li>Monitoring network, DVR CCTV, konfigurasi SAP dan koordinasi vendor.</li></ul></div>
+</div></div></section>
 
-                <!-- Kerja 4 -->
-                <div class="col-11 offset-1 timeline-item">
-                    <span class="badge bg-secondary mb-2">Agu 2015 - Jul 2016</span>
-                    <h4 class="text-white mb-1">IT Infrastructure (Freelance)</h4>
-                    <h5 class="text-info h6 mb-3">Lazada Indonesia - Jakarta, Indonesia</h5>
-                    <ul class="small text-white ps-3">
-                        <li class="mb-2">Melakukan perbaikan infrastruktur IT mencakup O365, LDAP, Manage Network, PABX, NAS, File Sharing, dan konfigurasi SAP.</li>
-                        <li class="mb-2">Melakukan monitoring network, maintenance DVR CCTV, pelaporan absensi, serta koordinasi dengan vendor pemeliharaan.</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
-    </section>
+<section class="pt-0"><div class="container"><div class="card-modern"><div class="row g-4 align-items-center"><div class="col-lg-8"><div class="section-kicker">Education & strengths</div><h2 class="h2 mb-3">Bachelor of Computer Science</h2><p class="mb-1"><strong>Universitas Indraprasta PGRI</strong> — Teknik Informatika, 2018</p><p class="muted mb-3">GPA: 2.96 / 4.00</p><div class="skill-wrap"><span class="skill">Problem Solving</span><span class="skill">Analytical Thinking</span><span class="skill">Technical Troubleshooting</span><span class="skill">Communication</span><span class="skill">Team Collaboration</span><span class="skill">Time Management</span><span class="skill">Continuous Learning</span></div></div><div class="col-lg-4"><div class="p-3 rounded-4" style="background:rgba(56,189,248,.05);border:1px solid var(--line)"><div class="muted small">Professional positioning</div><div class="fw-bold mt-2">Primary</div><div class="small muted">IT Infrastructure / System Administration / IT Operations</div><div class="fw-bold mt-2">Supporting</div><div class="small muted">Network & Server Monitoring / End-User Support / IT Asset Management</div><div class="fw-bold mt-2">Developing</div><div class="small muted">Generative AI / AI-assisted development / OpenClaw / n8n</div></div></div></div></div></div></section>
 
-    <!-- PENDIDIKAN -->
-    <section id="pendidikan" class="py-5">
-        <div class="container">
-            <h2 class="fw-bold text-white mb-4"><i class="bi bi-mortarboard me-3 text-primary"></i>Pendidikan</h2>
-            <div class="card-custom p-4">
-                <div class="d-flex justify-content-between align-items-start flex-wrap gap-2">
-                    <div>
-                        <h4 class="text-white mb-1">Universitas Indraprasta PGRI</h4>
-                        <p class="text-light-custom mb-0">S1 Teknik Informatika (Bachelor of Computer Science)</p>
-                    </div>
-                    <div class="text-md-end">
-                        <span class="badge bg-dark border border-secondary text-light px-3 py-2">Lulus: 2018</span>
-                        <p class="mt-2 mb-0 text-info fw-bold">IPK: 2.96 / 4.00</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- KEMAMPUAN & KETERAMPILAN -->
-    <section id="keahlian" class="py-5 bg-opacity-25 bg-black">
-        <div class="container">
-            <h2 class="fw-bold text-white mb-4"><i class="bi bi-cpu me-3 text-primary"></i>Keahlian & Keterampilan</h2>
-            <div class="row g-4">
-                <!-- Hard Skills -->
-                <div class="col-md-6">
-                    <div class="card-custom p-4 h-100">
-                        <h3 class="h5 text-white mb-3"><i class="bi bi-wrench-adjustable me-2 text-info"></i>Hard Skills</h3>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge-skill">Mikrotik</span>
-                            <span class="badge-skill">Ubuntu Server</span>
-                            <span class="badge-skill">Centos Server</span>
-                            <span class="badge-skill">Reverse Proxy</span>
-                            <span class="badge-skill">CPanel</span>
-                            <span class="badge-skill">Mail Server</span>
-                            <span class="badge-skill">Proxmox</span>
-                            <span class="badge-skill">VMware</span>
-                            <span class="badge-skill">SSL</span>
-                            <span class="badge-skill">Unifi</span>
-                            <span class="badge-skill">Storage Server</span>
-                            <span class="badge-skill">Helpdesk</span>
-                            <span class="badge-skill">CCTV</span>
-                        </div>
-                    </div>
-                </div>
-                <!-- Soft Skills -->
-                <div class="col-md-6">
-                    <div class="card-custom p-4 h-100">
-                        <h3 class="h5 text-white mb-3"><i class="bi bi-people me-2 text-info"></i>Soft Skills</h3>
-                        <div class="d-flex flex-wrap">
-                            <span class="badge-skill">Manajemen Waktu</span>
-                            <span class="badge-skill">Komunikasi Tertulis & Lisan</span>
-                            <span class="badge-skill">Berpikir Logis</span>
-                            <span class="badge-skill">Problem Solving</span>
-                            <span class="badge-skill">Kerjasama Tim</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- FOOTER -->
-    <footer class="py-4 text-center border-top border-secondary mt-5">
-        <div class="container">
-            <p class="small text-light-custom mb-0">&copy; 2026 Elham Widiyanto. Built with Bootstrap.</p>
-        </div>
-    </footer>
-
-    <!-- Bootstrap 5 JavaScript Bundle -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<section id="contact" class="pt-0"><div class="container"><div class="contact-box text-center"><div class="section-kicker">Let's connect</div><h2 class="section-title mb-3">Let's build better IT operations.</h2><p class="muted mx-auto mb-4" style="max-width:620px">Terbuka untuk diskusi seputar IT infrastructure, system administration, monitoring, enterprise IT dan pengembangan solusi berbasis AI.</p><div><a class="contact-link" href="mailto:elhamwidiyanto@gmail.com"><i class="bi bi-envelope"></i> elhamwidiyanto@gmail.com</a><a class="contact-link" href="https://wa.me/6281384034335" target="_blank"><i class="bi bi-whatsapp"></i> 081384034335</a><a class="contact-link" href="https://taplink.cc/elhamwidiyanto" target="_blank"><i class="bi bi-link-45deg"></i> taplink.cc/elhamwidiyanto</a></div><div class="mt-3 muted small"><i class="bi bi-geo-alt me-1"></i> Depok, Jawa Barat</div></div></div></section>
+</main>
+<footer><div class="container d-flex justify-content-between flex-wrap gap-2"><span>© 2026 Elham Widiyanto</span><span>IT Infrastructure • System Operations • Modern IT Tools</span></div></footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>
